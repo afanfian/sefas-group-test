@@ -21,6 +21,7 @@
                 <th class="p-2 border">Tanggal Lahir</th>
                 <th class="p-2 border">Jabatan</th>
                 <th class="p-2 border">Kota Asal</th>
+                <th class="p-2 border">Aksi</th>
             </tr>
             </thead>
             <tbody class="border bg-gray-50">
@@ -34,6 +35,14 @@
                     <td class="p-2 border">{{$item->date}}</td>
                     <td class="p-2 border">{{$item->role}}</td>
                     <td class="p-2 border">{{$item->city}}</td>
+                    <td>
+                        <a href="/profile/{{ $item->id }}/edit">Edit</a>
+                        <form action="/profile/{{ $item->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
