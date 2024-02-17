@@ -28,7 +28,7 @@
                 <input type="text" name="city" id="city" placeholder="Surabaya" class="px-4 py-2 border rounded-lg w-full focus:outline-none focus:border-blue-500">
             </div>
             <button type="submit" name="submit" class="px-4 py-2 rounded-lg text-white bg-blue-500 hover:bg-blue-600 focus:outline-none">
-                Save
+                Simpan
             </button>
         </form>
     </div>

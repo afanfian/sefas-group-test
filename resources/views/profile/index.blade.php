@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel</title>
+    <!-- Menggunakan Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
 </head>
 <body class="antialiased">
 <div class="flex justify-center pt-5">
     <div class="space-y-2">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href="/profile/create">Tambah User</a>
+        <button class="flex justify-end items-end text-right font-bold py-2 px-4 rounded bg-blue-500 hover:bg-blue-700 text-white">
+            <a href="/profile/create">Tambah User<i class="fas fa-plus pl-2"></i></a>
         </button>
         <p class="font-bold text-lg text-center">Tabel Profile Karyawan Sefas Group</p>
-        <table class="table-fixed rounded-md">
+        <table class="table-auto rounded-md">
             <thead class="border bg-blue-300">
             <tr class="border">
                 <th class="px-2 border text-center">No</th>
@@ -35,12 +37,12 @@
                     <td class="p-2 border">{{$item->date}}</td>
                     <td class="p-2 border">{{$item->role}}</td>
                     <td class="p-2 border">{{$item->city}}</td>
-                    <td>
-                        <a href="/profile/{{ $item->id }}/edit">Edit</a>
-                        <form action="/profile/{{ $item->id }}" method="POST">
+                    <td class="p-2 border">
+                        <a href="/profile/{{ $item->id }}/edit" class="text-blue-500"><i class="fas fa-edit"></i></a>
+                        <form action="/profile/{{ $item->id }}" method="POST" class="inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Delete</button>
+                            <button type="submit" class="text-red-500"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </td>
                 </tr>
