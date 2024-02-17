@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::controller(ProfileController::class)->group(function () {
     Route::get('/profile', 'index');
     Route::get('/profile/create', 'create');
