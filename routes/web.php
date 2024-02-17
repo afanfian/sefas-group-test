@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(ProfileController::class)->group(function () {
-    Route::get('/', 'index');
+    Route::get('/profile', 'index');
+    Route::get('/profile/create', 'create');
+    Route::post('/profile/store', 'store');
 });
 
