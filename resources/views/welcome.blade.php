@@ -8,8 +8,9 @@
 
     </head>
     <body class="antialiased">
-        <div>
-            <div class="space-y-2">
+        <div class="flex justify-center pt-5">
+            <div class="space-y-2 text-center">
+                <p class="font-bold text-lg">Tabel Profile Karyawan Sefas Group</p>
                 <table class="table-fixed rounded-md">
                     <thead class="border bg-blue-300">
                         <tr class="border">
