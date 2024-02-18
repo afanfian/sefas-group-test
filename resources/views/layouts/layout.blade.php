@@ -33,7 +33,7 @@
     <nav class="bg-black p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div>
-                <a href="/profile" class="text-white text-lg font-bold">
+                <a href="/" class="text-white text-lg font-bold">
                     <img src="/logo.png" alt="Logo" width="80" height="80">
                 </a>
             </div>
